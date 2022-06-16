@@ -15,7 +15,7 @@ public class UserDaoImp implements UserDao {
 
     @Override
     public List<User> getAllUsers() {
-        return entityManager.createQuery("select user from User user", User.class).getResultList();
+        return entityManager.createQuery("SELECT user FROM User user", User.class).getResultList();
     }
 
     //данный метод и сохраняет и изменяет объекты. У нового объекта id = 0, тогда persist, иначе merge (с присвоением текущего id)
